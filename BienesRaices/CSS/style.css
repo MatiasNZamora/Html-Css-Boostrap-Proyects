@@ -1,0 +1,364 @@
+html{font-size: 62.5%;} /* reset para RENS / 62.5% = 10px de 16px */
+
+*, *:before, *:after {box-sizing: inherit;} /* Snippet para evitar que el padding sea tomado en cuenta en el tamaño del elemento */
+
+body {
+    font-family: 'Lato', sans-serif; 
+    font-size: 1.6rem;
+    line-height: 2;
+}
+
+
+/* SISTEMA DE LETRAS */
+h1 { font-size: 3.8rem;}
+
+h2 {font-size: 3.4rem;}
+
+h3 {font-size: 3rem;}
+
+h4 {font-size: 2.6rem;}
+
+
+/* GLOBALES */
+img {max-width: 100%;}
+
+.container {
+    max-width: 120rem; /* = 1200px */
+    margin: 0 auto;
+}
+
+/* UTILIDADES */
+.section {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.d-block {display: block!important;} /* le da mayor relevancia al important*/
+
+.fw-300 {font-weight: 300;}
+
+.text-center {text-align: center;}
+
+/*BOTONES*/
+.button {
+    color: #ffff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 1.8rem;
+    padding: 1rem 3rem;
+    display: inline-block;
+    margin-top: 3rem;
+    text-align: center;
+    border: none;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+.btn-yellow {background-color: #E08709;}
+
+.btn-green {background-color: #71B100;}
+
+/* HEADER*/
+.site-header {
+    background-color: #333333;
+    padding: 1rem 0 3rem 0;
+}
+
+.site-header.inicio {
+    background-image: url(../img/header.jpg);
+    background-position: center; /* Posiciona el fondo en el centro*/
+    background-size: cover; /* Tomando el alto y ancho disponible guardando proporciones */
+    font-size: 1.8rem; /* esto es = a 18px */
+    height: 100vh;
+    min-height: 60rem;
+} 
+
+.container-header {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.container-header h1 {
+    color: #ffffff;
+    padding-bottom: 2rem;
+    max-width: 60rem;
+    line-height: 2;
+}
+
+.barra {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding-top: 3rem;
+}
+
+.navegacion a {
+    color: white;
+    text-decoration:none;
+    margin-right: 2rem;
+} 
+
+.navegacion a:hover {color: #71B100;}
+
+.navegacion a:last-of-type {margin-right: 0;}   /* (Pseudo selector) Selecciona al ultimo elemento */
+    
+
+/* ICONOS ANUNCIOS */
+.icon-nosotros {
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon {
+    flex-basis: calc(33.3% - 1rem);
+    text-align: center;
+}
+
+.icon h3 {text-transform: uppercase;}
+
+/* ANUNCIOS */ 
+.container-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;     /* definimos que el contenido se ponga debajo uno de otro */
+}
+
+.cards {
+    flex: 0 0 calc(33.3% - 1rem);  /* flex-grow:0;  flex-shrink: 0; flex-basis: calc(33.3% - 1rem); */
+    border: 1px solid #B5B5B5;
+    background-color: #F5F5F5;
+    margin-bottom: 2rem;
+}
+
+.content-cards{
+    padding: 2rem;
+}
+
+.content-cards h3, 
+.content-cards p {
+    margin: 0;
+}
+
+.price {
+    color: #71B100;
+    font-weight: 700;
+}
+
+.icons-characters{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.icons-characters li {display: flex; margin-top: 2rem;}
+
+.icons-characters li img {margin-right: 2rem;}
+
+.view-all {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* CONTACTO HOME */
+.contact-image {
+    background-image: url(/img/encuentra.jpg);
+    background-position: center center;
+    height: 400px;
+    display: flex;
+    align-items: center;
+}
+
+.content-contact {
+    flex: 1; /* esto es lo que se denomina factor de crecimiento */
+    color: #ffff;
+}
+
+.content-contact p {font-size: 1.8rem;}
+
+/* SECCION INFERIOR*/
+
+.bottom-section {
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 8rem;
+}
+
+.bottom-section .blog {flex-basis: 60%;}
+
+.bottom-section .testimonials {flex-basis: calc(40% - 2rem);}
+
+.entry-blog {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.entry-blog:last-of-type {margin-bottom: 0;}
+
+
+.entry-blog .image {flex-basis: 40%;}
+
+.entry-blog .entry-text {flex-basis: calc(60% - 3rem);}
+
+.entry-text a {
+    color: black;
+    text-decoration: none;
+}
+
+.entry-text h4 {
+    margin: 0;
+    line-height: 1.4;
+}
+
+.entry-text h4::after{
+    content:'';
+    display: block;
+    width: 15rem;
+    height: .5rem;
+    background: #71B100;
+    margin-top: 1rem;
+}
+
+.entry-text span {
+    color: #E08709;
+}
+
+/* TESTIMONIALS */
+.testimonial {
+    background-color: #71B100;
+    color: #ffffff;
+    font-size: 2.4rem;
+    padding: 2rem;
+    border-radius: 2rem;
+}
+
+.testimonial p {text-align: right;}
+
+.testimonial blockquote::before { 
+    content: '';
+    background-image: url(/img/comilla.svg);
+    width: 4rem;
+    height: 4rem;
+    position: absolute;
+    left: -2rem;
+}
+
+.testimonial blockquote {
+    position: relative;
+    padding-left: 5rem;
+    font-weight: 300;
+}
+
+/* FOOTER */
+.site-footer {
+    background-color: #333333;
+    margin: 0;
+}
+
+.container-footer {
+    padding: 3rem 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.copyright {
+    margin: 0;
+    color: #ffffff;
+    text-align: center;
+}
+
+/* CONTENIDO PARA PAGINAS INTERNAS */
+.contents-we {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* 1 fr = a una fraccion del espacio total*/
+    grid-column-gap: 2rem; /* nos permite separar los elementos */
+}
+
+.text-we blockquote {
+    font-weight: 900;
+    font-size: 2rem;
+    margin: 0;
+    padding: 1rem 0 3rem 0;
+}
+
+.container-center {
+    justify-content: center;
+    width: 80rem;
+    padding-bottom: 4rem;
+}
+
+.container-center main h1 {
+    padding-bottom: 4rem;
+}
+
+/* CONTACTO */
+
+.contacto p {
+    font-size: 1.5rem;
+    color: #4f4f4f;
+    margin: 2rem 0 0;
+}
+
+legend{
+    font-size: 2.4rem;
+    color: rgba(34, 33, 33, 0.2);
+}
+
+label {
+    font-weight: 600;
+    text-transform: uppercase;
+    display: block; /* nos permite poner cada elemento ocupado todo el espacio */
+}
+
+/* Deselecciona un tipo en espesifico para no aplicar estilos */
+input:not([type="submit"]),
+textarea,
+select {    
+    padding: 1rem;
+    display: block;
+    width: 98%;
+    background-color: #e1e1e1;
+    margin-bottom: 2rem;
+    border: none;
+    border-radius: 1rem;
+
+}
+
+input[type="radio"]{
+    width: auto;
+    margin: 0;
+}
+
+
+/* Aplicamos el padinng expesifico de Chromes */
+select{   
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.forma-contacto{
+    max-width: 30rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
